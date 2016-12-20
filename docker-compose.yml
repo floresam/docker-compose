@@ -1,0 +1,13 @@
+web:
+  image: fei_java
+  ports:
+   - "8000:8000"
+  links:
+   - redis
+   - mysql
+redis:
+  image: redis
+mysql:
+  image: fei_mysql
+  expose:
+    - "3306"
