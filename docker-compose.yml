@@ -1,13 +1,15 @@
 web:
-  image: fei_java
+  image: registry.ng.bluemix.net/floresam/fei_java
   ports:
    - "8000:8000"
   links:
    - redis
    - mysql
 redis:
-  image: redis
+  image: registry.ng.bluemix.net/floresam/fei_redis
 mysql:
-  image: fei_mysql
+  image: registry.ng.bluemix.net/floresam/fei_mysql:fixed
+  volumes:
+    - data:/var/lib/mysql:rw
   expose:
     - "3306"
