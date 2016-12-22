@@ -1,5 +1,6 @@
 web:
   image: registry.ng.bluemix.net/floresam/fei_java:latest
+  #command: ["tail -f /dev/null"]
   ports:
    - "8000:8000"
   links:
@@ -7,6 +8,8 @@ web:
    - mysql
 redis:
   image: registry.ng.bluemix.net/floresam/fei_redis:latest
+  expose:
+    - "6379"
 mysql:
   image: registry.ng.bluemix.net/floresam/fei_mysql:fixed
   volumes:
