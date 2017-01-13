@@ -11,7 +11,7 @@ redis:
   expose:
     - "6379"
 mysql:
-  image: registry.ng.bluemix.net/floresam/fei_mysql:fixed
+  image: registry.ng.bluemix.net/floresam/fei_mysql:latest
   volumes:
     - data:/var/lib/mysql:rw
   expose:
